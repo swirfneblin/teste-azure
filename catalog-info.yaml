@@ -1,0 +1,35 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: team-ti
+  description: IT Team Epharma
+spec:
+  type: team
+  profile:
+    # Intentional no displayName for testing
+    email: team-a@example.com
+    picture: https://api.dicebear.com/7.x/identicon/svg?seed=Fluffy&backgroundType=solid,gradientLinear&backgroundColor=ffd5dc,b6e3f4
+  parent: backstage
+  children: []
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: charles.damasceno
+spec:
+  profile:
+    displayName: Charles Damasceno
+    email: charles@example.com
+    picture: https://epharmapbm.visualstudio.com/_apis/GraphProfile/MemberAvatars/aad.NzM2ZDIzOTEtYjA5Mi03YzdlLWIyNzctNzY1Y2U3M2Y4OWRi?size=2&1715732906885
+  memberOf: [team-ti]
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: michael.douglas
+spec:
+  profile:
+    displayName: Michael Silva
+    email: michael.silva@epharma.com.br
+    picture: https://api.dicebear.com/7.x/avataaars/svg?seed=Leo&backgroundColor=transparent
+  memberOf: [team-ti]
